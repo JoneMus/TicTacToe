@@ -120,7 +120,7 @@ const winningConditions = [
 
 const checkResult = () => {
     let roundwon = false
-    for (let index = 0; index < 7; index++) {
+    for (let index = 0; index < 8; index++) {
         const element = winningConditions[index];
         let a = gameState[element[0]];
         let b = gameState[element[1]];
@@ -160,6 +160,7 @@ const resetGame = () => {
 }
 
 const checkIfDraw = () => {
+    console.log("Checking if Draw")
     let count = 0;
     gameState.forEach(element => {
         if (element.length === 0) {
@@ -175,7 +176,7 @@ const checkIfDraw = () => {
 // AI algorithm
 
 const computersTurn = () => {
-    for (let index = 0; index < 7; index++) {
+    for (let index = 0; index < 8; index++) {
         const element = winningConditions[index];
         let a = gameState[element[0]];
         let b = gameState[element[1]];
